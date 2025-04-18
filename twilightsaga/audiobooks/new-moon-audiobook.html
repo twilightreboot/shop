@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight Saga Books</title>
+    <link rel="stylesheet" href="css/twilightsaga.css">
+    <style>
+        body {
+            background-image: url('https://m.media-amazon.com/images/I/71F63AXN+BL.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0000009c; /* Changed to match header background color */
+            border-top: 2px solid #ddd;
+            margin-top: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .audio-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            background-color: transparent; /* Changed to transparent */
+            padding: 10px;
+            border: 2px solid #0f0c0c;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 660px;
+            margin: auto;
+        }
+        .audio-player {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 660px; /* Increased max-width */
+            margin: 2px; /* reduced margin */
+            background-color: #000000;
+            border: 1px solid #fffcfc;
+            border-radius: 2px;
+            padding: 2px; /* reduced padding */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .audio-player button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-right: 3px; /* Reduced margin */
+            font-size: 12px; /* Reduced font size */
+            color: white; /* Changed to white */
+            padding: 8px 5px; /* Reduced padding */
+            border-radius: 3px; /* Reduced border radius */
+            transition: background-color 0.3s;
+        }
+        .audio-player button:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Added hover effect */
+        }
+        .audio-player .skip {
+            margin-right: 2px; /* Reduced margin for skip buttons */
+        }
+        .audio-player input[type="range"] {
+            flex-grow: 1;
+        }
+        .audio-player .time {
+            margin-left: 10px;
+            min-width: 50px; /* Ensure space for timestamps */
+        }
+        .audio-player .duration {
+            margin-left: 10px;
+            min-width: 50px; /* Ensure space for duration */
+        }
+        @media (max-width: 600px) {
+            .header, .footer, .audio-container {
+                padding: 5px;
+                margin: 5px;
+                width: 95%; /* ensure container fits small screens */
+            }
+            .audio-player {
+                max-width: 100%;
+                flex-direction: column;
+                align-items: center;
+                margin: 5px auto;
+                padding: 5px;
+            }
+            .audio-player button,
+            .audio-player input[type="range"],
+            .audio-player .time,
+            .audio-player .duration,
+            .audio-player select,
+            .audio-player canvas {
+                width: 100%;
+                margin: 5px 0;
+            }
+            .audio-player canvas {
+                height: auto !important; /* allow canvas to scale */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>New Moon Audiobook by Stephenie Meyer</h1>
+        <p>📚✨ Dive into the Twilight Saga! Explore All Twilight Books Free 📖 Experience the magic, the love, and the adventure of this legendary series.</p>
+    </header>
+
+    <!-- Add audio player template -->
+    <template id="audio-player-template">
+        <div class="audio-player">
+            <audio></audio>
+            <button class="play-pause">Play</button>
+            <input type="range" class="progress" min="0" max="100" value="0">
+            <span class="time">0:00</span> / <span class="duration">0:00</span>
+            <button class="skip backward">Skip Back</button>
+            <button class="skip forward">Skip Forward</button>
+            <div class="volume-container">
+                <label class="volume-label">Volume:</label>
+                <input type="range" class="volume" min="0" max="1" step="0.01" value="1">
+            </div>
+            <button class="mute">Mute</button>
+            <label for="speed">Speed:</label>
+            <select class="speed">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+            </select>
+            <canvas width="600" height="100"></canvas>
+            <button class="theme-toggle">Toggle Theme</button>
+        </div>
+    </template>
+
+    <!-- Audio container; players will be injected here -->
+    <div class="audio-container">
+        <!-- ...existing code removed; dynamic insertion below... -->
+    </div>
+
+    <!-- Include dynamic player generation script -->
+    <script>
+        // Array of audio file sources (adjust as needed)
+        const audioSources = [
+            "nmaudio/1.mp3", "twilightaudio/02.mp3", "twilightaudio/03.mp3",
+            "twilightaudio/04.mp3", "twilightaudio/05.mp3", "twilightaudio/06.mp3",
+            "twilightaudio/07.mp3", "twilightaudio/08.mp3", "twilightaudio/09.mp3",
+        ];
+        const container = document.querySelector('.audio-container');
+        const template = document.getElementById('audio-player-template').content;
+        // Clear container if necessary
+        container.innerHTML = "";
+        audioSources.forEach(src => {
+            const player = document.importNode(template, true);
+            player.querySelector("audio").src = src;
+            container.appendChild(player);
+        });
+    </script>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="https://x.com/@TwilightNetflix">Twitter</a>
+            <a href="https://www.instagram.com/twilightrebootofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+        </div>
+        <p>&copy; 2025 Twilight Saga Fan Site. All rights reserved.</p>
+    </footer>
+    <script src="js/twilightsaga.js"></script>
+    <script src="js/audioPlayer.js"></script>
+</body>
+</html>

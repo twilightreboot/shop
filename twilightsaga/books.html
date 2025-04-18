@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight Saga Books</title>
+    <link rel="stylesheet" href="css/twilightsaga.css">
+    <style>
+        .books-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            background-color: #000; /* Changed to black */
+            padding: 20px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        .card:hover {
+            transform: rotateY(15deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f5f5f5; /* Assuming this is the header background color */
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0000009c; /* Changed to match header background color */
+            border-top: 2px solid #ddd;
+            margin-top: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Twilight Saga Books</h1>
+        <p>📚✨ Dive into the Twilight Saga! Explore All Twilight Books Free 📖 Experience the magic, the love, and the adventure of this legendary series.</p>
+    </header>
+
+    <main class="books-container">
+        <section id="twilight" class="card">
+            <a href="books/twilightbook.pdf">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4AgFhxAabj0_KT5g7mD-hisX_fLt1M-Zcew&s" alt="Twilight Book Cover">
+                <h3>Twilight (2005)</h3>
+                <p>Experience the beginning of the epic saga where Bella Swan meets Edward Cullen, a vampire, and their worlds collide.</p>
+            </a>
+        </section>
+        
+        <section id="new-moon" class="card">
+            <a href="books/newmoonbook.pdf">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrkEOa5elLQWzgBWiCqsacQaz_KB5HWEUSoQ&s" alt="New Moon Book Cover">
+                <h3>New Moon (2006)</h3>
+                <p>Follow Bella's journey as she copes with the loss of Edward and discovers the world of werewolves.</p>
+            </a>
+        </section>
+        
+        <section id="eclipse" class="card">
+            <a href="books/eclipsebook.pdf">
+                <img src="https://m.media-amazon.com/images/I/61+2FD3Kc-L.jpg"Eclipse Book Cover">
+                <h3>Eclipse (2007)</h3>
+                <p>Bella is forced to choose between her love for Edward and her friendship with Jacob as a string of mysterious killings terrorizes Seattle.</p>
+            </a>
+        </section>
+        
+        <section id="breaking-dawn" class="card">
+            <a href="books/breakingdawnbook.pdf">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_3RQ5kUaU47W4VfhvAld99j7U8Cpskd5qPA&s" alt="Breaking Dawn Book Cover">
+                <h3>Breaking Dawn (2008)</h3>
+                <p>The epic conclusion to the Twilight Saga, where Bella and Edward must protect their daughter from the Volturi.</p>
+            </a>
+        </section>
+        
+        <section id="midnight-sun" class="card">
+            <a href="books/midnightsunbook.pdf">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588597375i/53287484.jpg"Midnight Sun Book Cover">
+                <h3>Midnight Sun (2020)</h3>
+                <p>Experience the events of Twilight from Edward Cullen's perspective, revealing his inner thoughts and struggles.</p>
+            </a>
+        </section>
+        
+        <section id="life-and-death" class="card">
+            <a href="books/lifeanddeathbook.pdf">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1477428622i/31706920.jpg" alt="Life and Death Book Cover">
+                <h3>Life and Death: Twilight Reimagined (2015)</h3>
+                <p>A gender-swapped retelling of Twilight, introducing Beau Swan and Edythe Cullen.</p>
+            </a>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="https://x.com/@TwilightNetflix">Twitter</a>
+            <a href="https://www.instagram.com/twilightrebootofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+        </div>
+        <p>&copy; 2025 Twilight Saga Fan Site. All rights reserved.</p>
+    </footer>
+    <script src="js/twilightsaga.js"></script>
+</body>
+</html>

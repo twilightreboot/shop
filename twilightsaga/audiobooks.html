@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight Saga Audiobooks</title>
+    <link rel="stylesheet" href="css/twilightsaga.css">
+    <style>
+        .audiobooks-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            background-color: #000; /* Changed to black */
+            padding: 20px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .card {
+            padding: 10px;
+            margin: 10px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            background-color: #000000;
+        }
+        .card:hover {
+            transform: rotateY(15deg);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f5f5f5; /* Assuming this is the header background color */
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0000009c; /* Changed to match header background color */
+            border-top: 2px solid #ddd;
+            margin-top: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Twilight Saga Audiobooks</h1>
+        <p>🎧✨ Welcome to the Twilight Saga Audiobooks page! Open any book to play and immerse yourself in the captivating world of Twilight.</p>
+    </header>
+    <nav>
+        <!-- ...existing navigation links... -->
+    </nav>
+    <main class="audiobooks-container">
+        <section id="twilight-audiobook" class="card">
+            <a href="audiobooks/twilight-audiobook.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4AgFhxAabj0_KT5g7mD-hisX_fLt1M-Zcew&s" alt="Twilight Audiobook">
+            </a>
+        </section>
+        
+        <section id="new-moon-audiobook" class="card">
+            <a href="audiobooks/new-moon-audiobook.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrkEOa5elLQWzgBWiCqsacQaz_KB5HWEUSoQ&s" alt="New Moon Audiobook">
+            </a>
+        </section>
+        
+        <section id="eclipse-audiobook" class="card">
+            <a href="audiobooks/eclipse-audiobook.html">
+                <img src="https://m.media-amazon.com/images/I/61+2FD3Kc-L.jpg" alt="Eclipse Audiobook">
+            </a>
+        </section>
+        
+        <section id="breaking-dawn-audiobook" class="card">
+            <a href="audiobooks/breaking-dawn-audiobook.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_3RQ5kUaU47W4VfhvAld99j7U8Cpskd5qPA&s" alt="Breaking Dawn Audiobook">
+            </a>
+        </section>
+        
+        <section id="midnight-sun-audiobook" class="card">
+            <a href="audiobooks/midnight-sun-audiobook.html">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1588597375i/53287484.jpg" alt="Midnight Sun Audiobook">
+            </a>
+        </section>
+        
+        <section id="life-and-death-audiobook" class="card">
+            <a href="audiobooks/life-and-death-audiobook.html">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1477428622i/31706920.jpg" alt="Life and Death Audiobook">
+            </a>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="https://x.com/@TwilightNetflix">Twitter</a>
+            <a href="https://www.instagram.com/twilightrebootofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Instagram</a>
+        </div>
+        <p>&copy; 2025 Twilight Saga Fan Site. All rights reserved.</p>
+    </footer>
+    <script src="js/twilightsaga.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+}
+
+a {
+    color: #1abc9c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #16a085;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #34495e;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+nav a {
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #1abc9c;
+    color: black;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 300px; /* Ensures each card takes equal space */
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    margin: 0.5em 0;
+}
